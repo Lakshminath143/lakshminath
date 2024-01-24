@@ -4,9 +4,9 @@ driver = webdriver.Chrome("c://drivers//chromedriver.exe")
 driver.get("https://www.flightradar24.com/data/airports/pnq")
 # Navigating to arrivals section
 # it is dynamic webtable
-driver.find_elemets(By.XPATH,"//*[text(),'Arrivals']/").click()
+driver.find_elemets(By.XPATH,"//*[text()='Arrivals']/").click()
 # clicking alert continue box
-driver.find_element(By.XPATH,"//*[text(),'CONTINUE']").click()
+driver.find_element(By.XPATH,"//*[text()='CONTINUE']").click()
 listOfStatus=driver.find_elements(By.XPATH,"//*[@class='table table-condensed table-hover data-table m-n-t-15']/tbody/tr/td[7]/span]/thead/tr/td")
 for status in listOfStatus:
     print(status.text())
